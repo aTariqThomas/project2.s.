@@ -11,8 +11,12 @@ li $a1, 20 #Tells the system the maximum length of the text
 syscall #Exceutes the function
 
 
+li $v0, 4 #Code to display text
+la $a0, message
+syscall #Executs the call to display the text in the 'message' label
 
 li $v0, 10
 syscall
 #Basically indicates the end of 'main'.
+
 
