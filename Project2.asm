@@ -1,6 +1,6 @@
 .data
 
-message: .asciiz "Hi user! Type something." #The code should print this string out.
+message: .asciiz "Hi user! Type something: " #The code should print this string out.
 userInput: .space 20 #Reserves 20 bytes of data for whatever the person types in
 .text
 
@@ -15,8 +15,12 @@ li $v0, 4 #Code to display text
 la $a0, message
 syscall #Executs the call to display the text in the 'message' label
 
+
+#Displays text from User
+li $v0, 4
+la $a0, userInput
+syscall
+
 li $v0, 10
 syscall
 #Basically indicates the end of 'main'.
-
-
