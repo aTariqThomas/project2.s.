@@ -144,3 +144,9 @@ exit:
 	bne $t6, $zero, step_char_forward
 	
 	bgt $t5, 124, error_invalidInpt   # This basically does : 97 + N - 9
+	
+	step_char_forward:
+	
+	addi $a0, $a0, 1
+	
+	j check_the_string
