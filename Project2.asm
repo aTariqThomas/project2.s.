@@ -17,3 +17,11 @@
   user_Inpt:    .space  500
   
   invalid_Inpt: .asciiz "Invalid base-N number." # change n
+  
+  .text
+
+exit:
+  li $v0, 10
+  
+  # The Syscall will execute the function call basically 
+  syscall 
