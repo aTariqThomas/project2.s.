@@ -150,3 +150,12 @@ exit:
 	addi $a0, $a0, 1
 	
 	j check_the_string
+	
+	prepare_for_the_convsn:
+	move $a0, $t4
+	
+	addi $t7, $t7, 0 #Adds the registers together 
+	
+	add $s0, $s0, $t0
+	
+	addi $s0, $s0, -1	
