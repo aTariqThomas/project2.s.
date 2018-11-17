@@ -48,4 +48,7 @@ exit:
 
   la $a0, long_Inpt
   li $v0, 4
+  
+   syscall
+  j exit
 
