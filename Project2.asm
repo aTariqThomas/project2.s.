@@ -100,4 +100,12 @@ exit:
 	addi $t0, $t0, 1
 	j len_iteration
 
+	after_the_length_is_found:
 	
+	beqz $t0, error_emptyInpt
+	
+	slti $t3, $t0, 5
+	
+	beqz $t3, error_has_longInpt
+	
+	move $a0, $t4
