@@ -25,3 +25,15 @@ exit:
   
   # The Syscall will execute the function call basically 
   syscall 
+  
+  error_emptyInpt:
+
+# This function will be called if there is no input
+
+  la $a0, empty_Inpt
+  
+  li $v0, 4
+  
+  syscall
+  j exit
+
