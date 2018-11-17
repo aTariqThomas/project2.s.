@@ -62,3 +62,8 @@ exit:
   li $a1, 250
   
   syscall
+  
+  delete_left_pad:
+	li $t8, 32 # This adds a space
+	
+	lb $t9, 0($a0)
