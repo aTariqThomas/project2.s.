@@ -128,3 +128,11 @@ exit:
 	bne $t6, $zero, step_char_forward
 	
 	slti $t6, $t5, 65
+
+	bne $t6, $zero, error_invalidInpt
+	
+	slti $t6, $t5, 91                 # This basically does : 65 + N - 10
+	
+	bne $t6, $zero, step_char_forward
+	
+	slti $t6, $t5, 97
