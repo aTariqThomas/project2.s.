@@ -120,3 +120,11 @@ exit:
 	beq $t5, $t1, prepare_for_the_convsn #branches if equal
 	
 	slti $t6, $t5, 48
+	
+	bne $t6, $zero, error_invalidInpt
+	
+	slti $t6, $t5, 58
+	
+	bne $t6, $zero, step_char_forward
+	
+	slti $t6, $t5, 65
