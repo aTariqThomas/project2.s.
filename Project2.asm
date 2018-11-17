@@ -198,3 +198,9 @@ exit:
 	#This function handles the lower conversions
 	
 	addi $s4, $s4, -87
+	
+	base_10_conversion:
+	
+	addi $s4, $s4, -48 
+	
+	j serialize_number_for_the_result
