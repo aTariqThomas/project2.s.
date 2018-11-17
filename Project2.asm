@@ -204,3 +204,12 @@ exit:
 	addi $s4, $s4, -48 
 	
 	j serialize_number_for_the_result
+	
+	serialize_number_for_the_result:
+	beq $s0, $s3, firstDigit
+	
+	beq $s0, $s2, secndDigit
+	
+	beq $s0, $s1, thrdDigit
+	
+	beq $s0, $s5, fourthDigit
