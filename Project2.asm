@@ -110,4 +110,13 @@ exit:
 	beqz $t3, error_has_longInpt
 	
 	move $a0, $t4
-	j check_the_string
+	
+	check_the_string:
+	
+	lb $t5, 0($a0)
+	
+	beqz $t5, prepare_for_the_convsn
+	
+	beq $t5, $t1, prepare_for_the_convsn #branches if equal
+	
+	slti $t6, $t5, 48
