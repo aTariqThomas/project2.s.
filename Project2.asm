@@ -213,3 +213,10 @@ exit:
 	beq $s0, $s1, thrdDigit
 	
 	beq $s0, $s5, fourthDigit
+	
+	firstDigit:
+	 # The next line does (base N)^3
+	li $s6, 46656
+	mult $s4, $s6
+	mflo $s7
+	add $t7, $t7, $s7
