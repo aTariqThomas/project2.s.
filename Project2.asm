@@ -36,4 +36,10 @@ exit:
   
   syscall
   j exit
+  
+  error_invalidInpt:
+  la $a0, invalid_Inpt
+  li $v0, 4
+  syscall
+  j exit
 
