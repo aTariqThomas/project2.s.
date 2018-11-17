@@ -20,6 +20,7 @@
   
   .text
 
+ main:
 exit:
   li $v0, 10
   
@@ -52,7 +53,7 @@ exit:
    syscall
   j exit
 
-   main:
+  
 #This is the beginning of the main function
 
   li $v0, 8
