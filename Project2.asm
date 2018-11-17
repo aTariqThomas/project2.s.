@@ -89,3 +89,11 @@ exit:
 	
 	add $t4, $t4, $a0
 
+	len_iteration:
+	
+	lb $t2, 0($a0)
+	
+	beqz $t2, after_the_length_is_found #branches if equal to zero
+	beq $t2, $t1, after_the_length_is_found #branches if equal
+	
+	
