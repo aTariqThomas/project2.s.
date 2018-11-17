@@ -186,3 +186,15 @@ exit:
 	slti $t6, $s4, 120
 	
 	bne $t6, $zero, base_33_lower_conversion
+
+	base_33_upper_conversion:
+	#This function handles the upper conversions
+	
+	addi $s4, $s4, -55
+	j serialize_number_for_the_result
+
+	base_33_lower_conversion:
+	
+	#This function handles the lower conversions
+	
+	addi $s4, $s4, -87
