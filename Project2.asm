@@ -109,3 +109,4 @@ exit:
 	beqz $t3, error_has_longInpt
 	
 	move $a0, $t4
+	j check_the_string
