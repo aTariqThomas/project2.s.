@@ -96,4 +96,8 @@ exit:
 	beqz $t2, after_the_length_is_found #branches if equal to zero
 	beq $t2, $t1, after_the_length_is_found #branches if equal
 	
+	addi $a0, $a0, 1
+	addi $t0, $t0, 1
+	j len_iteration
+
 	
