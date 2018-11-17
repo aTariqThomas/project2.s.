@@ -73,3 +73,10 @@ exit:
 	move $t9, $a0
 	
 	j input_the_length
+
+
+	delete_the_firstCharacter:
+	
+	addi $a0, $a0, 1
+	
+	j delete_left_pad #jumps to delete_left_pad
