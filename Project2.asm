@@ -67,3 +67,9 @@ exit:
 	li $t8, 32 # This adds a space
 	
 	lb $t9, 0($a0)
+
+	beq $t8, $t9, delete_the_firstCharacter # Calls the function with the label titled : delete_the_firstCharacter
+	
+	move $t9, $a0
+	
+	j input_the_length
