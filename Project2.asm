@@ -52,3 +52,13 @@ exit:
    syscall
   j exit
 
+   main:
+#This is the beginning of the main function
+
+  li $v0, 8
+  
+  la $a0, user_Inpt
+  
+  li $a1, 250
+  
+  syscall
