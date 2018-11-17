@@ -250,3 +250,13 @@ exit:
 	mflo $s7
 	add $t7, $t7, $s7
 
+
+	print_result:
+
+# This function prints the results 
+	li $v0, 1
+	move $a0, $t7
+	syscall
+
+j exit
+
